@@ -1,0 +1,12 @@
+datasource db {
+  provider  = "postgresql"
+  url	    = process.env("DATABASE_URL")
+}
+model bookings {
+  id    Int     @id @default(autoincrement())
+  name String
+  date  String
+}
+generator client {
+  provider = "prisma-client-js"
+}
