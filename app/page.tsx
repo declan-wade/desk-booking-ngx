@@ -140,11 +140,6 @@ export default function Home() {
           </DialogHeader>
           <div className="flex justify-center">
             <div className="flex-child justify-evenly">
-              <InputOTP
-                maxLength={6}
-                render={({ slots }) => (
-                  <div className="space-y-2">
-                    <br></br>
                     <InputOTP
                       maxLength={6}
                       value={pin}
@@ -154,16 +149,13 @@ export default function Home() {
                       render={({ slots }) => (
                         <InputOTPGroup>
                           {slots.map((slot, index) => (
-                            <InputOTPSlot key={index} {...slot} data-lpignore="true" data-1p-ignore="true" />
+                            <InputOTPSlot key={index} {...slot}  />
                           ))}{" "}
                         </InputOTPGroup>
-                        
+
                       )}
                     />
                     <br></br>
-                  </div>
-                )}
-              />
             </div>
           </div>
           <DialogFooter>
